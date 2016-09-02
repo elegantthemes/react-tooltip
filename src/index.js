@@ -16,7 +16,7 @@ import getTipContent from './utils/getTipContent'
 import { parseAria } from './utils/aria'
 
 /* CSS */
-import cssStyle from './style'
+// import cssStyle from './style'
 
 @staticMethods @windowListener @customEvent @isCapture
 class ReactTooltip extends Component {
@@ -91,7 +91,7 @@ class ReactTooltip extends Component {
   }
 
   componentDidMount () {
-    this.setStyleHeader() // Set the style to the <link>
+    // this.setStyleHeader() // Set the style to the <link>
     this.bindListener() // Bind listener for tooltip
     this.bindWindowEvents() // Bind global event for static method
   }
@@ -356,14 +356,14 @@ class ReactTooltip extends Component {
    * Set style tag in header
    * in this way we can insert default css
    */
-  setStyleHeader () {
-    if (!document.getElementsByTagName('head')[0].querySelector('style[id="react-tooltip"]')) {
-      let tag = document.createElement('style')
-      tag.id = 'react-tooltip'
-      tag.innerHTML = cssStyle
-      document.getElementsByTagName('head')[0].appendChild(tag)
-    }
-  }
+  // setStyleHeader () {
+  //   if (!document.getElementsByTagName('head')[0].querySelector('style[id="react-tooltip"]')) {
+  //     let tag = document.createElement('style')
+  //     tag.id = 'react-tooltip'
+  //     tag.innerHTML = cssStyle
+  //     document.getElementsByTagName('head')[0].appendChild(tag)
+  //   }
+  // }
 
   /**
    * CLear all kinds of timeout of interval
