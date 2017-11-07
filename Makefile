@@ -25,6 +25,7 @@ devJS:
 	@$(NODE_BIN)/watchify -t babelify $(EXAMPLE_SRC)/index.js -o $(EXAMPLE_DIST)/index.js -dv
 
 devCSS:
+	@$(NODE_BIN)/node-sass $(SRC)/index.scss $(DIST)/index.css
 	@$(NODE_BIN)/node-sass $(EXAMPLE_SRC)/index.scss $(EXAMPLE_DIST)/index.css
 	@$(NODE_BIN)/node-sass $(SRC)/index.scss $(EXAMPLE_DIST)/style.css
 	@$(NODE_BIN)/node-sass -w $(EXAMPLE_SRC)/index.scss $(EXAMPLE_DIST)/index.css
